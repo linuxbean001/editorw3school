@@ -1,0 +1,234 @@
+/* ---- Customizations to the color grid palettes (font and background color) ------------------------------------------------------ */
+.ck.ck-color-ui-dropdown {
+  --ck-color-grid-tile-size: 20px;
+}
+.ck.ck-color-ui-dropdown .ck-color-grid {
+  grid-gap: 1px;
+}
+.ck.ck-color-ui-dropdown .ck-color-grid .ck-button {
+  border-radius: 0;
+}
+.ck.ck-color-ui-dropdown .ck-color-grid__tile:hover:not(.ck-disabled),
+.ck.ck-color-ui-dropdown .ck-color-grid__tile:focus:not(.ck-disabled) {
+  z-index: 1;
+  transform: scale(1.3);
+}
+
+/* ---- Mention list styles --------------------------------------------------------------- */
+.ck-mentions .mention__item {
+  display: flex;
+  align-items: center;
+}
+.ck-mentions .mention__item img {
+  border-radius: 100%;
+  height: 30px;
+}
+.ck-mentions .mention__item span {
+  margin-left: 0.5em;
+}
+.ck-mentions .mention__item.ck-on span {
+  color: var(--ck-color-base-background);
+}
+.ck-mentions .mention__item .mention__item__full-name {
+  color: hsl(0, 0%, 45%);
+}
+.ck-mentions .mention__item:hover:not(.ck-on) .mention__item__full-name {
+  color: hsl(0, 0%, 40%);
+}
+
+/* ---- Basic CSS reset ------------------------------------------------------ */
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.ck.ck-content.ck-editor__editable_inline > :first-child {
+  margin-top: 0;
+}
+
+/* ---- Styles of the demo page ------------------------------------------------------ */
+.editor-wrapper {
+  margin: 0 auto 2rem auto;
+}
+
+.header-wrapper {
+  padding: 1rem 2rem;
+}
+
+/* ---- Styles specific to the feature rich demo ------------------------------------------------------ */
+.ck.ck-word-count {
+  display: flex;
+  justify-content: flex-end;
+  background: var(--ck-color-toolbar-background);
+  padding: var(--ck-spacing-small) var(--ck-spacing-standard);
+  border: 1px solid var(--ck-color-toolbar-border);
+  border-top-width: 0;
+  border-radius: 0 0 var(--ck-border-radius);
+  font: normal normal normal var(--ck-font-size-base)/var(--ck-line-height-base) var(--ck-font-face);
+}
+
+.ck.ck-word-count .ck-word-count__words {
+  margin-right: var(--ck-spacing-standard);
+}
+
+.ck.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
+.ck.ck-rounded-corners .ck-source-editing-area textarea {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+
+.ck-editor__main:focus {
+  border : 1px solid #c1b0b0 !important ;
+  outline: none;
+}
+
+.borderData{
+  border: 1px solid #bfb2b2 !important;
+  padding: 21px 12px !important;
+  font-weight: 400;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1 !important;
+  background-color: #eeeeee96;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0d6efd;
+  --bs-btn-border-color: #0d6efd;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+
+.btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+}
+
+
+.btn {
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-font-family: ;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: var(--bs-body-color);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: var(--bs-border-width);
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: var(--bs-border-radius);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  display: inline-block;
+  padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  font-family: var(--bs-btn-font-family);
+  font-size: var(--bs-btn-font-size);
+  font-weight: var(--bs-btn-font-weight);
+  line-height: var(--bs-btn-line-height);
+  color: var(--bs-btn-color);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border-radius: var(--bs-btn-border-radius);
+  background-color: var(--bs-btn-bg);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+span {
+  font-weight: 600;
+  color: black !important;
+}
+
+
+.ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset, .ck.ck-reset_all {
+  word-wrap: break-word;
+  background: transparent;
+  border: 0;
+  margin: 0.5px !important;
+  padding: 2;
+  text-decoration: none;
+  transition: none;
+  vertical-align: middle;
+}
+
+.ck.ck-content:not(.ck-style-grid__button__preview):not(.ck-editor__nested-editable) {
+  min-height: 300px;
+  padding: 10px !important;
+}
+
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {
+  height: 1000px;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+  height: 1000px;
+}
+
+
+textarea {
+  resize: both;
+  height: 1000px;
+  width: 100%;
+  padding: 10px;
+  border : 1px solid #c1b0b0 !important
+}
+
+textarea:focus {
+  border : 1px solid #c1b0b0 !important ;
+  outline: none;
+}
+
+.mt {
+  margin-top: 2px;
+}
+
+.col-content{
+  width: calc(50% - 5px) !important;
+}
+
+
+@media screen and (max-width: 300px) {
+  .col-content{
+    width: 100% !important;
+  }
+}
+
+
+.navbar>.container, .navbar>.container-fluid {
+  display: -ms-flexbox;
+  display: block !important;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
